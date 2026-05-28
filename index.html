@@ -558,6 +558,122 @@
       transform: translateY(-1px);
     }
 
+    /* ── Why Choose Us ── */
+    .why-section {
+      background: var(--ivory);
+      padding: 100px 24px;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .why-item {
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .why-item.visible { opacity: 1; transform: translateY(0); }
+    .why-icon {
+      font-size: 28px;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .why-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--burgundy-dark);
+      margin-bottom: 12px;
+    }
+    .why-desc {
+      font-size: 13px;
+      color: var(--text-soft);
+      line-height: 1.8;
+    }
+
+    /* ── Locations ── */
+    .locations-section {
+      background: var(--cream-dark);
+      padding: 100px 24px;
+    }
+    .locations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .location-tag {
+      border: 1px solid rgba(184,150,78,0.3);
+      padding: 16px 20px;
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      transition: all 0.3s;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s, color 0.3s;
+    }
+    .location-tag.visible { opacity: 1; transform: translateY(0); }
+    .location-tag:hover { border-color: var(--gold); color: var(--burgundy); }
+    .location-state {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--burgundy-dark);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* ── Services ── */
+    .services-section {
+      background: var(--ivory);
+      padding: 100px 24px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .service-card {
+      padding: 40px 32px;
+      border: 1px solid rgba(184,150,78,0.2);
+      background: var(--cream);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .service-card.visible { opacity: 1; transform: translateY(0); }
+    .service-card-tag {
+      font-size: 10px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+    .service-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--burgundy-dark);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .service-card-desc {
+      font-size: 13.5px;
+      color: var(--text-soft);
+      line-height: 1.9;
+    }
+
     /* ── Contact section ── */
     .contact-section {
       background: linear-gradient(150deg, #1A0A0A 0%, #3D1010 50%, #1A0808 100%);
@@ -1257,6 +1373,107 @@
     </div>
   </div>
 
+  <!-- Why Choose Us -->
+  <section class="why-section">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div class="section-header">
+        <div class="section-tag">Our Promise</div>
+        <h2 class="section-title">Why Choose <em>Red Wedding</em></h2>
+        <p class="section-desc">We blend artistry with professionalism to deliver memories you'll cherish forever</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon">◆</div>
+          <div class="why-title">Cinematic Storytelling</div>
+          <p class="why-desc">Every wedding is a unique love story. We craft cinematic films and photographs that capture not just moments, but emotions — the laughter, the tears, the magic of your day.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">◆</div>
+          <div class="why-title">Same Day Edit</div>
+          <p class="why-desc">Relive your wedding day highlights the very same night. Our Same Day Edit service delivers a beautifully edited video ready to share with your guests before the night is over.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">◆</div>
+          <div class="why-title">Experienced Team</div>
+          <p class="why-desc">Trusted by hundreds of Malaysian couples, our photographers and videographers bring years of wedding expertise — so you can relax knowing every precious moment is covered.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">◆</div>
+          <div class="why-title">Transparent Pricing</div>
+          <p class="why-desc">Clear, all-inclusive packages with no hidden fees. From intimate ROM ceremonies to grand ballroom receptions, we have options to suit every couple and every budget.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services-section">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div class="section-header">
+        <div class="section-tag">What We Offer</div>
+        <h2 class="section-title">Wedding <em>Services</em></h2>
+        <p class="section-desc">Complete wedding photography and videography services across Malaysia</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-card-tag">Photography</div>
+          <div class="service-card-title">Wedding Photography Malaysia</div>
+          <p class="service-card-desc">Professional actual day wedding photography capturing every meaningful moment — from the morning preparations and ROM ceremony to the grand reception. Our photographers use a photojournalistic approach blended with fine art aesthetics, giving you images that feel both timeless and authentic.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-tag">Videography</div>
+          <div class="service-card-title">Wedding Videography Malaysia</div>
+          <p class="service-card-desc">Cinematic wedding films that tell your love story beautifully. We create full-length documentaries and highlight reels that capture the atmosphere, vows, and emotions of your wedding day. Perfect for couples who want to relive every moment for years to come.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-tag">Pre-Wedding</div>
+          <div class="service-card-title">Pre-Wedding Photography</div>
+          <p class="service-card-desc">Intimate pre-wedding sessions for couples across Malaysia — from lush forest escapes and urban backdrops in Kuala Lumpur to beach sunsets in Penang and heritage streets in Melaka. Mini sessions and full dream destination packages available.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-tag">Add-On</div>
+          <div class="service-card-title">Same Day Edit (SDE)</div>
+          <p class="service-card-desc">A highlight of our service — our Same Day Edit delivers a professionally edited video of your wedding day highlights, screened at your dinner reception the very same night. Give your guests a cinematic experience they won't forget.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-tag">Bundle</div>
+          <div class="service-card-title">Photo + Video Combo Package</div>
+          <p class="service-card-desc">Get the best of both worlds with our combo packages — one photographer and one videographer working seamlessly together. Bundled pricing means you save more while ensuring complete coverage of your wedding day from every angle.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-tag">ROM / Solemnization</div>
+          <div class="service-card-title">ROM & Solemnization Coverage</div>
+          <p class="service-card-desc">Dedicated photography and videography for ROM ceremonies and solemnizations in Kuala Lumpur, Selangor, and throughout Peninsular Malaysia. Intimate, meaningful, and beautifully documented.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations We Serve -->
+  <section class="locations-section">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div class="section-header">
+        <div class="section-tag">Coverage Area</div>
+        <h2 class="section-title">Serving Couples <em>Across Malaysia</em></h2>
+        <p class="section-desc">Based in Kuala Lumpur — available nationwide and for destination weddings</p>
+      </div>
+      <div class="locations-grid">
+        <div class="location-tag"><span class="location-state">Kuala Lumpur</span>Wedding Photographer KL</div>
+        <div class="location-tag"><span class="location-state">Selangor</span>Wedding Photographer Selangor</div>
+        <div class="location-tag"><span class="location-state">Penang</span>Wedding Photographer Penang</div>
+        <div class="location-tag"><span class="location-state">Johor Bahru</span>Wedding Photographer JB</div>
+        <div class="location-tag"><span class="location-state">Melaka</span>Wedding Photographer Melaka</div>
+        <div class="location-tag"><span class="location-state">Negeri Sembilan</span>Wedding Photographer NS</div>
+        <div class="location-tag"><span class="location-state">Pahang</span>Wedding Photographer Pahang</div>
+        <div class="location-tag"><span class="location-state">Perak</span>Wedding Photographer Perak</div>
+        <div class="location-tag"><span class="location-state">Sabah</span>Wedding Photographer Sabah</div>
+        <div class="location-tag"><span class="location-state">Sarawak</span>Wedding Photographer Sarawak</div>
+        <div class="location-tag"><span class="location-state">Kedah</span>Wedding Photographer Kedah</div>
+        <div class="location-tag"><span class="location-state">Destination</span>Overseas Wedding Available</div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section class="contact-section" id="contact">
     <div class="contact-inner">
@@ -1315,6 +1532,21 @@
     document.querySelectorAll('.card').forEach((card, i) => {
       card.dataset.delay = (i % 3) * 120;
       observer.observe(card);
+    });
+
+    document.querySelectorAll('.why-item').forEach((el, i) => {
+      el.dataset.delay = i * 100;
+      observer.observe(el);
+    });
+
+    document.querySelectorAll('.service-card').forEach((el, i) => {
+      el.dataset.delay = (i % 3) * 120;
+      observer.observe(el);
+    });
+
+    document.querySelectorAll('.location-tag').forEach((el, i) => {
+      el.dataset.delay = i * 50;
+      observer.observe(el);
     });
 
     // Hero slideshow
